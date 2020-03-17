@@ -1,0 +1,38 @@
+                  
+.pie {
+height: 350px;
+/*height: calc(var(--size, 350) * 1px);*/
+position: relative;
+width: 350px;
+/*width: calc(var(--size, 350) * 1px);*/
+background: black;
+border-radius: 100%;
+overflow: hidden;
+
+}
+
+.pie_segment {
+/*border: 5px dotted red;*/
+height: 100%;
+position: absolute;
+width: 100%;
+transform: translate(0, -50%) rotate(90deg) rotate(calc(var(--offset, 0) * 1deg));
+/*transform: translate(0, -50%) rotate(90deg) rotate(0deg);*/
+transform-origin: 50% 100%;
+overflow: hidden;
+
+}
+
+.pie_segment:before {
+/*border: 5px dotted red;*/
+background: var(--bg);
+content:" ";
+height: 100%;
+position: absolute;
+transform: translate(0, 100%) rotate(calc(var(--value, 90) * 1deg));
+/*transform: translate(0, 100%) rotate(45deg);*/
+transform-origin: 50% 0;
+width: 100%; 
+overflow: hidden; 
+
+}
